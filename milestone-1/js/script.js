@@ -1,16 +1,13 @@
-const boxesContainer = document.querySelector(`.container`);
-
 for(let i = 1; i <= 100; i++) {
-    let threeOrFive;
-    if( i % 3 === 0) {
-        threeOrFive = `three`;
-    }
-    if( i % 5 === 0) {
-        threeOrFive = `five`;
-    }
-    const newBox = `
-        <div class="box ${threeOrFive}">${i}</div>
-    `;
-
-    boxesContainer.innerHTML += newBox;
+    if( i % 3 === 0 && i % 5 === 0) {
+    console.log (`fizzBuzz`)
+    } else if( i % 3 === 0){
+        console.log(`fizz`)
+    } else if( i % 5 === 0) {
+        console.log(`buzz`)
+    } else if( i % 3 === 0 && i % 5 === 0) {
+        console.log (`fizzBuzz`)
+    } else{
+        console.log (i)
+    } 
 }
